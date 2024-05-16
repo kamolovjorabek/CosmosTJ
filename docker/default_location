@@ -1,0 +1,7 @@
+location /static/ {
+    alias /app/static/;
+}
+
+location /staticfiles/ {
+    alias /app/staticfiles/;
+}

@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv('DEBUG') == 'True')
 
-ALLOWED_HOSTS = [] if DEBUG else os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = [os.getenv("ALLOWED_HOST"), ]
 
 
 # Application definition
@@ -156,3 +156,8 @@ EMAIL_HOST_PASSWORD = "ybfm kiin kuvt vsgh "
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "kosmostj.pm@gmail.com"
+
+
+CSRF_TRUSTED_ORIGINS = []
+if scrf_subdomain := os.getenv('SCRF_SUBDOMAIN'):
+    CSRF_TRUSTED_ORIGINS += [f'http://{scrf_subdomain}', f'https://{scrf_subdomain}']

@@ -9,6 +9,8 @@ pandas = "*"
 openpyxl = "*"
 xlsxwriter = "*"
 docker = "*"
+django = "*"
+gunicorn = "*"
 
 [dev-packages]
 
